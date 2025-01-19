@@ -20,7 +20,7 @@ public class Main {
                     secao4.menu();
                     break;
                 case 0: 
-                    System.out.println("Saindo.");
+                    System.out.println("Saindo...");
                     break;
                 default:
                     System.out.println("Opção inválida.");
