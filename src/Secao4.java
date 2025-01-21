@@ -10,6 +10,7 @@ public class Secao4 {
         do {
             System.out.println("\n== MENU SEÇÃO 04 ==");
             System.out.println(" 1 - Exercício 01: Informe dois valores para saber a soma.");
+            System.out.println(" 2 - Exercício 02: Informe o raio de um circulo para saber a area do mesmo.");
             System.out.println(" 0 - Sair.");
             System.out.print("Escolha uma opção: ");
             opc = input.nextInt();
@@ -17,6 +18,9 @@ public class Secao4 {
             switch (opc) {
                 case 1:
                     exercicio1();
+                    break;
+                case 2:
+                    exercicio2();
                     break;
                 case 0:
                     System.out.println("Saindo...");
@@ -43,6 +47,21 @@ public class Secao4 {
         soma = valor1 + valor2;
 
         System.out.printf("Soma = %d%n", soma);
+    }
+
+    public void exercicio2(){
+        /*
+        Faça um programa para ler o valor do raio de um círculo, e depois mostrar o valor da área deste círculo com quatro
+        casas decimais conforme exemplos.
+        Fórmula da área: area = π . raio2
+        Considere o valor de π = 3.14159
+        */
+        Scanner input = new Scanner(System.in);
+
+        double raio = input.nextDouble();
+        double area = 3.14159 * (Math.pow(raio, 2.00));
+
+        System.out.printf("A = %.4f%n", area);
     }
     
 }
