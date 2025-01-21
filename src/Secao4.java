@@ -13,6 +13,7 @@ public class Secao4 {
             System.out.println(" 2 - Exercício 02: Informe o raio de um circulo para saber a area do mesmo.");
             System.out.println(" 3 - Exercício 03: Informe quatro valores A, B, C e D para saber a diferença entre A e B para C e D.");
             System.out.println(" 4 - Exercício 04: Informe o número do funcionário, a quantidade de horas trabalhada e o valor da hora de trabalho.");
+            System.out.println(" 5 - Exercício 05: Informe o código da peça 1, a quantidade e o valor unitário, em seguida faça o mesmo para a peça 2.");
             System.out.println(" 0 - Sair.");
             System.out.print("Escolha uma opção: ");
             opc = input.nextInt();
@@ -29,6 +30,9 @@ public class Secao4 {
                     break;
                 case 4:
                     exercicio4();
+                    break;
+                case 5:
+                    exercicio5();
                     break;
                 case 0:
                     System.out.println("Saindo...");
@@ -109,5 +113,30 @@ public class Secao4 {
 
         System.out.printf("Número = %d%n", numero);
         System.out.printf("Número = U$ %.2f%n", salario);
+    }
+
+    public void exercicio5(){
+        /*
+        Fazer um programa para ler o código de uma peça 1, o número de peças 1, o valor unitário de cada peça 1, o
+        código de uma peça 2, o número de peças 2 e o valor unitário de cada peça 2. Calcule e mostre o valor a ser pago.
+        */
+        Scanner input = new Scanner(System.in);
+
+        int codigo1, codigo2;
+        int quantidade1, quantidade2;
+        double valor1, valor2;
+        double total;
+
+        codigo1 = input.nextInt();
+        quantidade1 = input.nextInt();
+        valor1 = input.nextDouble();
+
+        codigo2 = input.nextInt();
+        quantidade2 = input.nextInt();
+        valor2 = input.nextDouble();
+
+        total = (quantidade1 * valor1) + (quantidade2 * valor2);
+
+        System.out.printf("Valor a Pagar: %.2f%n", total);
     }
 }
