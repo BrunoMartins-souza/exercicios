@@ -12,6 +12,7 @@ public class Secao4 {
             System.out.println(" 1 - Exercício 01: Informe dois valores para saber a soma.");
             System.out.println(" 2 - Exercício 02: Informe o raio de um circulo para saber a area do mesmo.");
             System.out.println(" 3 - Exercício 03: Informe quatro valores A, B, C e D para saber a diferença entre A e B para C e D.");
+            System.out.println(" 4 - Exercício 04: Informe o número do funcionário, a quantidade de horas trabalhada e o valor da hora de trabalho.");
             System.out.println(" 0 - Sair.");
             System.out.print("Escolha uma opção: ");
             opc = input.nextInt();
@@ -25,6 +26,9 @@ public class Secao4 {
                     break;
                 case 3:
                     exercicio3();
+                    break;
+                case 4:
+                    exercicio4();
                     break;
                 case 0:
                     System.out.println("Saindo...");
@@ -87,5 +91,23 @@ public class Secao4 {
 
         System.out.printf("Diferença = %d%n", diferenca);
     }
-    
+
+    public void exercicio4(){
+        /*
+        Fazer um programa que leia o número de um funcionário, seu número de horas trabalhadas, o valor que recebe por
+        hora e calcula o salário desse funcionário. A seguir, mostre o número e o salário do funcionário, com duas casas
+        decimais.
+        */
+        Scanner input = new Scanner(System.in);
+
+        int numero = input.nextInt();
+        double horasTrabalhada = input.nextDouble();
+        double valorPorHora = input.nextDouble();
+        double salario;
+
+        salario = horasTrabalhada * valorPorHora;
+
+        System.out.printf("Número = %d%n", numero);
+        System.out.printf("Número = U$ %.2f%n", salario);
+    }
 }
