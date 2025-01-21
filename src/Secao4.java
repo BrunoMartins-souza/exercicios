@@ -14,6 +14,7 @@ public class Secao4 {
             System.out.println(" 3 - Exercício 03: Informe quatro valores A, B, C e D para saber a diferença entre A e B para C e D.");
             System.out.println(" 4 - Exercício 04: Informe o número do funcionário, a quantidade de horas trabalhada e o valor da hora de trabalho.");
             System.out.println(" 5 - Exercício 05: Informe o código da peça 1, a quantidade e o valor unitário, em seguida faça o mesmo para a peça 2.");
+            System.out.println(" 6 - Exercício 06: Informe tres valores com ponto flutuante de dupla precisão.");
             System.out.println(" 0 - Sair.");
             System.out.print("Escolha uma opção: ");
             opc = input.nextInt();
@@ -33,6 +34,9 @@ public class Secao4 {
                     break;
                 case 5:
                     exercicio5();
+                    break;
+                case 6:
+                    exercicio6();
                     break;
                 case 0:
                     System.out.println("Saindo...");
@@ -138,5 +142,50 @@ public class Secao4 {
         total = (quantidade1 * valor1) + (quantidade2 * valor2);
 
         System.out.printf("Valor a Pagar: %.2f%n", total);
+    }
+
+    public void exercicio6(){
+        /*
+        Fazer um programa que leia três valores com ponto flutuante de dupla precisão: A, B e C. Em seguida, calcule e
+        mostre:
+        */
+        Scanner input = new Scanner(System.in);
+
+        double a, b, c;
+
+        a = input.nextDouble();
+        b = input.nextDouble();
+        c = input.nextDouble();
+
+        /*
+        a) a área do triângulo retângulo que tem A por base e C por altura.
+        */
+        double areaA = (a * c) / 2.00;
+
+        /*
+        b) a área do círculo de raio C. (pi = 3.14159)
+        */
+        double areaB = 3.14159 * (Math.pow(c, 2.00));
+
+        /*
+        c) a área do trapézio que tem A e B por bases e C por altura.
+        */
+        double areaC = ((a + b) * c) / 2.00;
+
+        /*
+        d) a área do quadrado que tem lado B.
+        */
+        double areaD = Math.pow(b, 2.00);
+
+        /*
+        e) a área do retângulo que tem lados A e B.
+        */
+        double areaE = a * b;
+
+        System.out.printf("TRIANGULO: %.3f%n", areaA);
+        System.out.printf("CIRCULO: %.3f%n", areaB);
+        System.out.printf("TRAPEZIO: %.3f%n", areaC);
+        System.out.printf("QUADRADO: %.3f%n", areaD);
+        System.out.printf("RETANGULO: %.3f%n", areaE);
     }
 }
