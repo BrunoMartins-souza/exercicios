@@ -11,6 +11,7 @@ public class Secao4 {
             System.out.println("\n== MENU SEÇÃO 04 ==");
             System.out.println(" 1 - Exercício 01: Informe dois valores para saber a soma.");
             System.out.println(" 2 - Exercício 02: Informe o raio de um circulo para saber a area do mesmo.");
+            System.out.println(" 3 - Exercício 03: Informe quatro valores A, B, C e D para saber a diferença entre A e B para C e D.");
             System.out.println(" 0 - Sair.");
             System.out.print("Escolha uma opção: ");
             opc = input.nextInt();
@@ -21,6 +22,9 @@ public class Secao4 {
                     break;
                 case 2:
                     exercicio2();
+                    break;
+                case 3:
+                    exercicio3();
                     break;
                 case 0:
                     System.out.println("Saindo...");
@@ -62,6 +66,26 @@ public class Secao4 {
         double area = 3.14159 * (Math.pow(raio, 2.00));
 
         System.out.printf("A = %.4f%n", area);
+    }
+
+    public void exercicio3(){
+        /*
+        Fazer um programa para ler quatro valores inteiros A, B, C e D. A seguir, calcule e mostre a diferença do produto
+        de A e B pelo produto de C e D segundo a fórmula: DIFERENCA = (A * B - C * D).
+        */
+        Scanner input = new Scanner(System.in);
+
+        int a, b, c, d;
+        int diferenca;
+
+        a = input.nextInt();
+        b = input.nextInt();
+        c = input.nextInt();
+        d = input.nextInt();
+
+        diferenca = (a * b) - (c * d);
+
+        System.out.printf("Diferença = %d%n", diferenca);
     }
     
 }
